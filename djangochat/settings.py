@@ -33,7 +33,8 @@ DEBUG = True
 
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['liberty-labs.onrender.com', 'your-other-hosts.com', 'localhost', '127.0.0.1']
+
 
 
 # Application definition
@@ -60,6 +61,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'djangochat.urls'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 TEMPLATES = [
     {
@@ -128,3 +132,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
