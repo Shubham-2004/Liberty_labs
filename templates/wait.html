@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main{
+            width: 270px;
+            height: 40px;
+            background-color: rgb(247, 247, 109);
+            position: relative;
+        }
+        .div {
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            background-color: red;
+        }
+        .content div{
+            margin-top: 3px;
+            margin-bottom: 3px;
+            margin-left: 8px;
+        }
+        a{
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin-right: 30px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: whitesmoke;
+            background-color: blue;
+            font-size: 20px;
+            padding: 15px;
+            border-radius: 25px;
+        }
+        a:hover {
+            background-color: rgb(59, 59, 227);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="div"></div>
+            <div class="content">
+                <div>
+                    <p>Admin has not valid you</p>
+                    <p><strong>NOTE:</strong>It may take 2 to 3 days.</p>
+                </div>
+            </div>
+        </div>
+        <a href="{% url 'expertDashboard' %}">After Validation</a>
+    </div>
+    
+</body>
+</html>

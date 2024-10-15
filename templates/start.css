@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    background-color: #222;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    background-color: whitesmoke;
+    width: 300px;
+    height: fit-content;
+    padding: 25px;
+    border-radius: 5px;
+}
+

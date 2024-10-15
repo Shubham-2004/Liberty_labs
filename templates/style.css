@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-boxs;
+}
+
+body {
+    background-image: url("../kyr1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sideBar {
+    position: fixed;
+    width: 240px;
+    background-color:#FDE8E9;
+    height: 100vh;
+    transition: 0.2s ease all;
+}
+
+.sideBar2 {
+    position: fixed;
+    width: 0px;
+    overflow: hidden;
+    background-color: bisque;
+    height: 100vh;
+    transition: 0.2s ease all;
+}
+
+.cross {
+    cursor: pointer;
+}
+
+.forSide {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ele {
+    padding: 8px;
+    margin: 95px auto 20px;
+}
+
+.element .ele a {
+    margin-bottom: 20px;
+    display: block;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.element .ele a:hover {
+    background-color: #596475;
+    color: whitesmoke;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+
+.nav-bar {
+    width: 100%;
+    text-align: end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.nav-bar h1,a {
+    margin-right: 15px;
+    text-align: center;
+}
+
+.three {
+    font-size: 28px;
+    margin-left: 20px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.header {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 45px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

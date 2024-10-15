@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        <!-- Bootstrap CSS -->
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-boxs;
+        }
+        
+        body {
+        
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .sideBar {
+            position: fixed;
+            width: 240px;
+            background-color:#FDE8E9;
+            height: 100vh;
+            transition: 0.2s ease all;
+        }
+        
+        .sideBar2 {
+            position: fixed;
+            width: 0px;
+            overflow: hidden;
+            background-color: bisque;
+            height: 100vh;
+            transition: 0.2s ease all;
+        }
+        
+        .cross {
+            cursor: pointer;
+        }
+        
+        .forSide {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .ele {
+            padding: 8px;
+            margin: 95px auto 20px;
+        }
+        
+        .element .ele a {
+            margin-bottom: 20px;
+            display: block;
+            padding: 5px;
+            border-bottom: 1px solid black;
+            cursor: pointer;
+        }
+        
+        .element .ele a:hover {
+            background-color: #596475;
+            color: whitesmoke;
+            border-radius: 15px;
+            transition: 0.5s;
+        }
+        
+        
+        .nav-bar {
+            width: 100%;
+            text-align: end;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid black;
+        }
+        
+        .nav-bar h1,a {
+            margin-right: 15px;
+            text-align: center;
+        }
+        
+        .three {
+            font-size: 28px;
+            margin-left: 20px;
+            margin-right: 40px;
+            cursor: pointer;
+        }
+        
+        .header {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 45px;
+        }
+        
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ele ul{
+          list-style: none;
+          margin-left: 10px;
+          font-size: 15px;
+        }
+        .ele ul1 {
+          list-style: none;
+          margin-left: 10px;
+        }
+
+    </style>
+  </head>
+  <body style="background-color : #FFFFE0">
+    <div class="sideBar2" id="side">
+      <div class="element">
+        <div class="forSide">
+         
+          <h5 class="cross" id="cross">&times;</h5>
+        </div>
+        <div class="ele">
+          <a id="id">Know Your rights</a>
+          <ul id="ulel">
+            <li><a href="{% url 'knw' %}">FAQs</a></li>
+            <li><a href="{% url 'chatgpt' %}">Ask to Legal Sahayak</a></li>
+          </ul>
+          
+          <a href="{% url 'indexbackend' %}">How can I obtain legal docs</a>
+          <a href="{% url 'home' %}">Ask to Expert</a>
+          <a href="{% url 'edocs' %}">EaseDocs</a>
+          <a href="{% url 'contact' %}">Contact Us</a> 
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="nav-bar">
+      <div class="main">
+        <i class="fa fa-bars three" id="three"></i>  
+       <h1>User Dashboard</h1>
+      </div>
+      <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+      </div>
+    </nav>
+    <h2 class="header">
+      Hello User ⚖️,<br> Welcome to Liberty Labs.
+    </h2>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   
+
+  </body>
+  <script>
+    let cross = document.getElementById("cross");
+let side = document.getElementById("side");
+let three = document.getElementById("three");
+let ul = document.getElementById("ulel");
+let id = document.getElementById("id");
+
+
+id.addEventListener("click", function(){
+  ul.classList.toggle("ul1");
+});
+
+three.addEventListener("click", function(){
+    side.className = "sideBar";
+});
+
+
+cross.addEventListener("click", function(){
+    side.classList.toggle("sideBar2");
+});
+</script>
+</html>
+
+
+
