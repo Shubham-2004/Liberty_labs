@@ -1,0 +1,7 @@
+Django==4.2.1            # The version of Django you are using
+djangorestframework==3.14.0  # If you are using Django REST Framework
+psycopg2==2.9.7          # If you are using PostgreSQL as your database
+gunicorn==20.1.0         # If you are deploying using Gunicorn
+Pillow==10.0.0           # For image handling in Django
+django-cors-headers==3.13.0 # For handling Cross-Origin Resource Sharing (CORS)
+whitenoise==6.5.0        # For serving static files in production
