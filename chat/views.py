@@ -38,39 +38,41 @@ def wait(request):
 def expertDashboard(request):
     return render (request,'expertDashboard.html')
 def SignupPage(request):
-    if request.method=='POST':
-        uname=request.POST.get('username')
-        email=request.POST.get('email')
-        pass1=request.POST.get('password1')
-        pass2=request.POST.get('password2')
+    if request.method == 'POST':
+        uname = request.POST.get('username')
+        email = request.POST.get('email')
+        pass1 = request.POST.get('password1')
+        pass2 = request.POST.get('password2')
 
-        if pass1!=pass2:
-            return HttpResponse("Your password and confrom password are not Same!!")
+        if pass1 != pass2:
+            return HttpResponse("Your password and confirm password do not match!")
+        elif User.objects.filter(username=uname).exists():
+            return HttpResponse("Username already exists!")
         else:
-
-            my_user=User.objects.create_user(uname,email,pass1)
+            my_user = User.objects.create_user(username=uname, email=email, password=pass1)
             my_user.save()
             return redirect('login')
-        
-    return render (request,'signup.html')
-        
+
+    return render(request, 'signup.html')
+
+
 def eSignupPage(request):
-    if request.method=='POST':
-        uname=request.POST.get('username')
-        email=request.POST.get('email')
-        pass1=request.POST.get('password1')
-        pass2=request.POST.get('password2')
+    if request.method == 'POST':
+        uname = request.POST.get('username')
+        email = request.POST.get('email')
+        pass1 = request.POST.get('password1')
+        pass2 = request.POST.get('password2')
 
-        if pass1!=pass2:
-            return HttpResponse("Your password and confrom password are not Same!!")
+        if pass1 != pass2:
+            return HttpResponse("Your password and confirm password do not match!")
+        elif User.objects.filter(username=uname).exists():
+            return HttpResponse("Username already exists!")
         else:
-
-            my_user=User.objects.create_user(uname,email,pass1)
+            my_user = User.objects.create_user(username=uname, email=email, password=pass1)
             my_user.save()
             return redirect('elogin')
 
-
-    return render (request,'esignup.html')
+    return render(request, 'esignup.html')
 
 def LoginPage(request):
     if request.method=='POST':
